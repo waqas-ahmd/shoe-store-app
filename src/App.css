@@ -2,37 +2,236 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ProductsContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 950px) {
+  .ProductsContainer {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ProductsContainer {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProductsContainer {
+    grid-template-columns: auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavBar {
+  background-color: rgb(51, 113, 228);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.NavLinks div {
+  margin-left: 5px;
+  padding: 3px;
+  width: 80px;
+  background-color: white;
+  border-radius: 4px;
+}
+.NavLinks div a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+}
+.NavTitle {
+  letter-spacing: 2px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+}
+
+.Product {
+  background-color: white;
+  margin: 5px;
+  box-shadow: 0px 0px 4px rgb(66, 66, 66);
+  border-radius: 5px;
+}
+
+.ProductDetails {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ProductImage {
+  margin: 5px;
+  margin-bottom: 0px;
+}
+
+.ProductImage img {
+  object-fit: cover;
+}
+
+.ProductInfo {
+  text-align: left;
+}
+
+.ProductFunctions {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.AddItem {
+  font-size: small;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.UpdateItems {
+  display: flex;
+  flex-direction: row;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.UpdateItem {
+  border: 1px solid black;
+  width: 15px;
+}
+.ItemsNumber {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 30px;
+}
+.CartTitle {
+  padding: 10px;
+  font-size: large;
+  font-weight: 600;
+}
+
+.ItemsList {
+  width: 480px;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .ItemsList {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.CartItem {
+  margin: 2px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  align-items: center;
+}
+.CartItemImage {
+  display: flex;
+}
+.CartItemImage img {
+  margin: auto;
+}
+
+.CartItemDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 1;
+}
+
+.CartItemDetails .CartItemInfo {
+  text-align: left;
+}
+
+.CartItemDetails .ItemCost {
+  font-size: medium;
+}
+
+.add-remove-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-remove-items .UpdateItems {
+  margin-left: 5px;
+}
+
+.UpdateItems div {
+  text-align: center;
+}
+
+.CartItemTitle {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.TotalSection {
+  margin: 2px;
+  background-color: rgb(51, 113, 228);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.TotalSection .Payment {
+  padding: 2px 15px;
+  background: white;
+  border-radius: 3px;
+  font-weight: 500;
+  cursor: default;
+}
+.Thanks {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Thanks div {
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+.Payment a {
+  text-decoration: none;
+  display: block;
+}
+
+.ProductCard {
+  position: relative;
+}
+.Checked {
+  width: 30px;
+  height: 30px;
+  top: 15%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-image: url(https://i.imgur.com/ig7wlPu.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
 }
