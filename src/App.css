@@ -174,7 +174,7 @@
 }
 
 .add-remove-items .UpdateItems {
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 .UpdateItems div {
@@ -234,4 +234,9 @@
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
+}
+
+.ProductName {
+  letter-spacing: 0.6px;
+  font-weight: 500;
 }
