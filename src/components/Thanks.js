@@ -1,5 +1,3 @@
-const { Link } = require("react-router-dom");
-
 function Thanks() {
   return (
     <div className="Thanks">
