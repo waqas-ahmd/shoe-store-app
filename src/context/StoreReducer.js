@@ -15,9 +15,7 @@ export default (state, action) => {
         uniqueCartItems: state.uniqueCartItems.filter(
           (item) => item !== action.payload
         ),
-        cartItems: state.uniqueCartItems.filter(
-          (item) => item !== action.payload
-        ),
+        cartItems: state.cartItems.filter((item) => item !== action.payload),
       };
     case "INC_ITEM":
       return {
